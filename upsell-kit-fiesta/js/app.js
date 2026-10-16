@@ -91,42 +91,7 @@ function initThemeToggle() {
    3. INICIALIZACIÓN OFICIAL HOTMART SALES FUNNEL
    ========================================================================== */
 function initHotmartSalesFunnel() {
-  const scriptId = 'hotmart-elements-script';
-  if (!document.getElementById(scriptId)) {
-    const script = document.createElement('script');
-    script.id = scriptId;
-    script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
-    script.async = true;
-
-    script.onload = () => {
-      if (window.checkoutElements) {
-        try {
-          window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-          console.log('Hotmart Sales Funnel Widget mounted successfully.');
-        } catch (e) {
-          console.warn('Hotmart Sales Funnel init notice:', e);
-        }
-      }
-    };
-
-    document.head.appendChild(script);
-  }
-
-  // Fallback para botón principal por si el usuario hace clic directo
-  const fallbackBtn = document.getElementById('btn-add-upsell');
-  if (fallbackBtn) {
-    fallbackBtn.addEventListener('click', (e) => {
-      // Si Hotmart generó un botón dentro del iframe o contenedor, simular clic
-      const hotmartButton = document.querySelector('#hotmart-sales-funnel button, #hotmart-sales-funnel a');
-      if (hotmartButton) {
-        e.preventDefault();
-        hotmartButton.click();
-      } else {
-        // En caso de que se esté probando en local o preview sin token activo
-        console.log('Acción de compra upsell activada ($5.90 USD)');
-      }
-    });
-  }
+  // El widget de Hotmart Sales Funnel se inicializa directamente desde index.html
 }
 
 /* ==========================================================================

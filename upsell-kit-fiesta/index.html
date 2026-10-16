@@ -819,25 +819,16 @@
             (El precio se convierte de forma automática a tu moneda local al momento del cobro)
           </p>
 
-          <!-- CONTENEDOR OFICIAL HOTMART SALES FUNNEL -->
+          <!-- HOTMART - Sales Funnel Widget -->
+          <!--- sales funnel container --->
           <div id="hotmart-sales-funnel"></div>
 
-          <!-- BOTÓN DIRECTO DE COMPRA (CTA ULTRA ACCIÓN) -->
-          <button id="btn-add-upsell" class="btn-cta-upsell" type="button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-            <span>¡SÍ! AGREGAR A MI PEDIDO POR SOLO $5,90</span>
-          </button>
-
-          <!-- ENLACE PSICOLÓGICO DE RECHAZO (DECLINE LINK) -->
-          <div class="decline-wrapper">
-            <button id="btn-decline-upsell" class="btn-decline" type="button">
-              No gracias, prefiero vender únicamente toppers y perder la oportunidad de ofrecer kits de fiesta completos
-            </button>
-          </div>
+          <!--- script load and setup --->
+          <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+          <script>
+            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+          </script>
+          <!-- HOTMART - Sales Funnel Widget -->
 
           <!-- BENEFICIOS / GARANTÍAS DE CONFIANZA -->
           <div class="trust-badges-row">
