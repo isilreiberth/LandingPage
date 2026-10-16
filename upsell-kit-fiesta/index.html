@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Espera! Oferta Exclusiva | Super Pack Completo de Kits de Fiesta</title>
+  <meta name="description"
+    content="Completa tu pedido con el Super Pack de Kits de Fiesta: +500 moldes de cajitas, etiquetas, decoración, invitaciones y fuentes para triplicar tus ganancias. Oferta única de $5.90 USD.">
+
+  <!-- Preconnect para velocidad de carga óptima -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Tipografía Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos Principales -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1868903807606248');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1868903807606248&ev=PageView&noscript=1" />
+  </noscript>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       TOPBAR CON ADVERTENCIA DE URGENCIA Y CONTADOR REGRESIVO
+       ========================================================================== -->
+  <div class="topbar-warning">
+    <div class="topbar-content">
+      <span class="warning-pulse-badge">⚠️ ¡ESPERA! NO CIERRES ESTA PÁGINA</span>
+      <span>TU PEDIDO NO ESTÁ COMPLETO TODAVÍA &bull; OFERTA VÁLIDA POR:</span>
+      <div class="topbar-timer-box">
+        <span id="topbar-minutes">09</span>:<span id="topbar-seconds">59</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER DEL EMBUDO (BREADCRUMB DE PASOS)
+       ========================================================================== -->
+  <header class="funnel-header">
+    <div class="container funnel-header-inner">
+      <a href="#hero" class="brand-badge">
+        <div class="brand-badge-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+          </svg>
+        </div>
+        <span>TOPPER<span>PRO</span> VIP</span>
+      </a>
+
+      <!-- Pasos del Embudo -->
+      <div class="funnel-steps">
+        <div class="step-item completed">
+          <span class="step-number">✓</span>
+          <span>Paso 1: TopperPro</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step-item active">
+          <span class="step-number">2</span>
+          <span>Paso 2: Oferta Especial</span>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step-item">
+          <span class="step-number">3</span>
+          <span>Paso 3: Acceso Inmediato</span>
+        </div>
+      </div>
+
+      <!-- Selector de Tema (Modo Claro / Oscuro) -->
+      <button id="theme-toggle-btn" class="theme-toggle-btn" title="Cambiar Tema Claro/Oscuro"
+        aria-label="Cambiar tema">
+        <svg id="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <svg id="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO / TITULAR DE IMPACTO
+       ========================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container container-narrow">
+      <div class="oto-pill">
+        <span>⚡ OFERTA EXCLUSIVA DE UNA SOLA VEZ (OTO)</span>
+      </div>
+
+      <h1 class="hero-title">
+        +500 Moldes Listos Para Que <span class="highlight-gradient">Ganes Más Por Pedido</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Ya tienes los toppers… ahora <strong>agrega cajitas, etiquetas, invitaciones y decoración completa</strong> para
+        vender kits de fiesta completos y <strong>triplicar tus ganancias</strong> con cada cliente.
+      </p>
+
+      <!-- Mockup Visual Principal -->
+      <div class="hero-media-wrapper">
+        <div class="hero-media-card">
+          <img src="https://i.postimg.cc/NF8vPsdJ/Kit-Completo-para-Fiestas-en-Canva.webp"
+            alt="Kit Completo de Fiesta y Papelería" class="hero-img" width="800" height="640" loading="eager">
+          <div class="hero-media-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="3"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <span>PACK VIP COMPLETO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 1: LA MAYORÍA DE EMPRENDEDORAS (ORIGINAL MEJORADA)
+       ========================================================================== -->
+  <section class="section-pain-points">
+    <div class="container container-narrow">
+      <div class="pain-header">
+        <h2 class="pain-title">La mayoría de emprendedoras:</h2>
+      </div>
+
+      <!-- Puntos de Dolor en Tarjetas Horizontales Suaves (Estilo Original Lovable) -->
+      <div class="pain-cards-stack">
+        <div class="pain-card">
+          <div class="pain-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </div>
+          <p class="pain-card-text">
+            <strong>Venden solo toppers</strong> y dejan dinero sobre la mesa
+          </p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </div>
+          <p class="pain-card-text">
+            <strong>No ofrecen cajitas ni etiquetas</strong> como complemento
+          </p>
+        </div>
+
+        <div class="pain-card">
+          <div class="pain-card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </div>
+          <p class="pain-card-text">
+            <strong>Pierden la oportunidad</strong> de armar kits completos y cobrar más
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta Mejorada de Oportunidad / Solución Directa -->
+      <div class="opportunity-banner">
+        <div class="opp-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+          <span>LA SOLUCIÓN CON ESTE PACK</span>
+        </div>
+        <p class="opp-highlight-text">
+          Pasa de vender <strong>un solo topper de $5</strong> a vender <strong>kits completos de fiesta de
+            $25+</strong> listos para imprimir y armar en minutos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN 2: EL COMPLEMENTO PERFECTO (ORIGINAL MEJORADA)
+       ========================================================================== -->
+  <section class="section-complement">
+    <div class="container container-narrow">
+      <div class="complement-header">
+        <span class="complement-tag">EL COMPLEMENTO PERFECTO</span>
+        <h2 class="complement-title">
+          +500 moldes de cajitas, etiquetas y decoración <span class="highlight-pink">organizados por temas</span>
+        </h2>
+      </div>
+
+      <!-- Tarjeta Premium con los 5 Elementos y sus Iconos Circulares -->
+      <div class="complement-card">
+        <div class="complement-list">
+
+          <!-- Item 1: Cajitas -->
+          <div class="complement-item">
+            <div class="complement-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                <path d="M12 7v14" />
+              </svg>
+            </div>
+            <div class="complement-item-body">
+              <p class="complement-item-text">+200 moldes de cajitas para armar y vender</p>
+            </div>
+            <span class="complement-badge-mini">Listos para armar</span>
+          </div>
+
+          <!-- Item 2: Etiquetas -->
+          <div class="complement-item">
+            <div class="complement-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              </svg>
+            </div>
+            <div class="complement-item-body">
+              <p class="complement-item-text">+150 etiquetas personalizables por tema</p>
+            </div>
+            <span class="complement-badge-mini">Personalizables</span>
+          </div>
+
+          <!-- Item 3: Decoración Mesa Dulce -->
+          <div class="complement-item">
+            <div class="complement-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                <path d="M3 6h18" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+            </div>
+            <div class="complement-item-body">
+              <p class="complement-item-text">+150 elementos de decoración para mesa dulce</p>
+            </div>
+            <span class="complement-badge-mini">Mesa Dulce</span>
+          </div>
+
+          <!-- Item 4: Organizados por Temas -->
+          <div class="complement-item">
+            <div class="complement-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <div class="complement-item-body">
+              <p class="complement-item-text">Organizados por temas: safari, princesas, héroes y más</p>
+            </div>
+            <span class="complement-badge-mini">Más pedidos</span>
+          </div>
+
+          <!-- Item 5: Canva Celular -->
+          <div class="complement-item">
+            <div class="complement-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+                <path d="m15 5 4 4" />
+              </svg>
+            </div>
+            <div class="complement-item-body">
+              <p class="complement-item-text">100% editable en Canva desde tu celular</p>
+            </div>
+            <span class="complement-badge-mini highlight">Sin PC</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ENTREGABLES DEL PACK (COMPLEMENTO CON LOS NOMBRES EXACTOS DE LAS CARPETAS)
+       ========================================================================== -->
+  <section id="entregables" class="section-deliverables">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">BIBLIOTECA COMPLETA DE RECURSOS</span>
+        <h2 class="section-title">¿Qué Contiene Este Super Pack?</h2>
+        <p class="section-subtitle">
+          Todo el material profesional organizado y clasificado para que tengas recursos infinitos listos para armar:
+        </p>
+      </div>
+
+      <!-- Grid con los 18 Entregables con sus Nombres Exactos -->
+      <div class="deliverables-grid">
+
+        <!-- 01 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 01</span>
+            <h4 class="deliverable-name">01. MATERIAL 1500 KITS DE FIESTA</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 02</span>
+            <h4 class="deliverable-name">02. TEMAS ACTUALIZADOS 1, 2 Y 3</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 03</span>
+            <h4 class="deliverable-name">03. SÚPER KIT DE ARCHIVOS DIGITALES</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 04</span>
+            <h4 class="deliverable-name">04. MOLDE LIMPIO PAPELERÍA DE FIESTA</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 05</span>
+            <h4 class="deliverable-name">05. +140 CAKE TOPPERS</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.5 16.88 12 2l9.5 14.88a1 1 0 0 1-.84 1.54H3.34a1 1 0 0 1-.84-1.54Z" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 06</span>
+            <h4 class="deliverable-name">06. 100 CAJAS PIRÁMIDE</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 07 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2h8l2 5v13a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7l2-5Z" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 07</span>
+            <h4 class="deliverable-name">07. 100 CAJAS MILK</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 08 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="m21.12 6.4-6.05-4.06a2 2 0 0 0-2.17-.05L2.84 6.35A2 2 0 0 0 2 8.02v7.95a2 2 0 0 0 .95 1.71l6.04 4.07a2 2 0 0 0 2.17.05l10.05-4.06A2 2 0 0 0 22 15.98V8.03a2 2 0 0 0-.88-1.63Z" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 08</span>
+            <h4 class="deliverable-name">08. 100 CAJAS CUBO</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 09 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12 2a5 5 0 0 0-5 5v3H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-2V7a5 5 0 0 0-5-5Z" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 09</span>
+            <h4 class="deliverable-name">09. 100 CACHEPOTS</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6H6a2 2 0 0 0-2 2v2a8 8 0 0 0 16 0V8a2 2 0 0 0-2-2Z" />
+              <path d="M12 2v4" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 10</span>
+            <h4 class="deliverable-name">10. MODELOS DE CAPSULAS PARA CUPCAKES</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 11</span>
+            <h4 class="deliverable-name">11. COMBO 10 FIESTAS LISTAS</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2" />
+              <path d="M3 9h18" />
+              <path d="M9 21V9" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 12</span>
+            <h4 class="deliverable-name">12. KIT DE FIESTA (ARCHIVOS EN POWERPOINT)</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 13</span>
+            <h4 class="deliverable-name">13. 1300 CAKE TOPPERS (ARCHIVOS EN STUDIO SILHOUETTE)</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 14</span>
+            <h4 class="deliverable-name">14. INVITACIONES (ARCHIVOS EN STUDIO SILHOUETTE)</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+              <path d="M12 18h.01" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 15</span>
+            <h4 class="deliverable-name">15. PAQUETE DE INVITACIONES DIGITALES EDITABLES</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 16</span>
+            <h4 class="deliverable-name">16. PAQUETE DE MOLDES DE CAJAS</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 7 4 4 20 4 20 7" />
+              <line x1="9" x2="15" y1="20" y2="20" />
+              <line x1="12" x2="12" y1="4" y2="20" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 17</span>
+            <h4 class="deliverable-name">17. LETRAS Y NÚMEROS 3D</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="deliverable-card">
+          <div class="deliverable-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+              <path d="M6 6h10" />
+              <path d="M6 10h10" />
+            </svg>
+          </div>
+          <div>
+            <span class="deliverable-number">Módulo 18</span>
+            <h4 class="deliverable-name">18. PAQUETE DE 11 MIL FUENTES PREMIUM</h4>
+          </div>
+          <div class="deliverable-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CÓMO FUNCIONA EN 3 PASOS
+       ========================================================================== -->
+  <section class="section-steps">
+    <div class="container container-narrow">
+      <span class="section-tag">PROCESO RÁPIDO Y SENCILLO</span>
+      <h2 class="section-title">¿Cómo Funciona?</h2>
+      <p class="section-subtitle">No necesitas experiencia previa ni software costoso. Diseñado para trabajar ágil:</p>
+
+      <div class="steps-container">
+        <!-- Paso 1 -->
+        <div class="step-card">
+          <span class="step-pill-tag">PASO 1</span>
+          <div class="step-icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+              <path d="M12 18h.01" />
+            </svg>
+          </div>
+          <h3 class="step-card-title">Edita en Canva o PC</h3>
+          <p class="step-card-desc">Personaliza nombres, edades y colores desde tu teléfono celular o computadora en
+            minutos.</p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="step-card">
+          <span class="step-pill-tag">PASO 2</span>
+          <div class="step-icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect width="12" height="8" x="6" y="14" />
+            </svg>
+          </div>
+          <h3 class="step-card-title">Imprime en Casa</h3>
+          <p class="step-card-desc">Imprime con tu impresora convencional o en cualquier papelería local en papel
+            fotográfico u opalina.</p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="step-card">
+          <span class="step-pill-tag">PASO 3</span>
+          <div class="step-icon-circle">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
+          <h3 class="step-card-title">Arma y Vende Más</h3>
+          <p class="step-card-desc">Entrega kits temáticos completos y cobra mucho más por cada pedido al mismo cliente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FRASE DE IMPACTO / SOCIAL PROOF
+       ========================================================================== -->
+  <section class="section-quote">
+    <div class="container container-narrow">
+      <div class="quote-box">
+        <p>
+          “Con toppers vendes uno solo. Con el kit completo, <span class="quote-accent">vendes 3 veces más</span> al
+          mismo cliente en cada fiesta.”
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECCIÓN DE OFERTA EXCLUSIVA / CAJA DE CHECKOUT HOTMART
+       ========================================================================== -->
+  <section id="oferta-upsell" class="section-offer">
+    <div class="container container-narrow">
+      <div class="offer-card">
+        <div class="offer-badge-ribbon">
+          🔥 OFERTA EXCLUSIVA DE UNA SOLA VEZ &bull; 80% DESCUENTO
+        </div>
+
+        <div class="offer-content-inner">
+          <p class="price-strike-label">Si compraras cada paquete por separado:</p>
+          <span class="price-strike">$29.00 USD</span>
+
+          <p class="price-deal-label">Solo por estar en esta página ahora mismo, llévate TODO por solo:</p>
+
+          <div class="price-mega">
+            <span class="price-currency">$</span>
+            <span class="price-amount">5</span>
+            <span class="price-cents">,90</span>
+            <span style="font-size: 1.2rem; font-weight: 800; color: var(--text-muted); margin-left: 4px;">USD</span>
+          </div>
+
+          <p class="price-disclaimer">
+            (El precio se convierte de forma automática a tu moneda local al momento del cobro)
+          </p>
+
+          <!-- CONTENEDOR OFICIAL HOTMART SALES FUNNEL -->
+          <div id="hotmart-sales-funnel"></div>
+
+          <!-- BOTÓN DIRECTO DE COMPRA (CTA ULTRA ACCIÓN) -->
+          <button id="btn-add-upsell" class="btn-cta-upsell" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+            <span>¡SÍ! AGREGAR A MI PEDIDO POR SOLO $5,90</span>
+          </button>
+
+          <!-- ENLACE PSICOLÓGICO DE RECHAZO (DECLINE LINK) -->
+          <div class="decline-wrapper">
+            <button id="btn-decline-upsell" class="btn-decline" type="button">
+              No gracias, prefiero vender únicamente toppers y perder la oportunidad de ofrecer kits de fiesta completos
+            </button>
+          </div>
+
+          <!-- BENEFICIOS / GARANTÍAS DE CONFIANZA -->
+          <div class="trust-badges-row">
+            <div class="trust-badge-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>Acceso Inmediato</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>Descarga Instantánea</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>Sin Mensualidad</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              <span>Pago 100% Seguro por Hotmart</span>
+            </div>
+          </div>
+
+          <!-- Sello de Garantía Oficial -->
+          <div
+            style="margin-top: 22px; display: flex; align-items: center; justify-content: center; gap: 14px; background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 12px; padding: 12px 18px; max-width: 440px; margin-left: auto; margin-right: auto;">
+            <img src="assets/guarantee-badge.png" alt="Garantía de Satisfacción 100%"
+              style="width: 58px; height: 58px; object-fit: contain; flex-shrink: 0;">
+            <div style="text-align: left;">
+              <h5 style="font-size: 0.92rem; font-weight: 800; color: var(--text-main); margin-bottom: 2px;">Garantía
+                Total de Satisfacción</h5>
+              <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.35;">Si el material no supera tus
+                expectativas, tienes respaldo total sin riesgos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TIMER DE PIE DE OFERTA -->
+      <div class="timer-footer-card">
+        <p style="font-size: 0.92rem; font-weight: 700; color: var(--text-muted);">
+          ⚠️ Esta oferta especial solo aparece una vez. Si cierras o recargas esta página, no volverás a ver este
+          precio:
+        </p>
+        <div class="timer-digits-display">
+          <span class="timer-box" id="bottom-minutes">09</span>
+          <span class="timer-sep">:</span>
+          <span class="timer-box" id="bottom-seconds">59</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BARRA FLOTANTE FIJA AL HACER SCROLL (STICKY BAR)
+       ========================================================================== -->
+  <div id="sticky-upsell-bar" class="sticky-upsell-bar">
+    <div class="sticky-bar-left">
+      <span style="font-size: 1.2rem;">🎁</span>
+      <div>
+        <p class="sticky-bar-title">Super Pack Kits de Fiesta (+500 Moldes)</p>
+        <p class="sticky-bar-price">Oferta OTO: $5,90 USD <span
+            style="font-size: 0.75rem; text-decoration: line-through; color: var(--text-light);">$29 USD</span></p>
+      </div>
+    </div>
+    <a href="#oferta-upsell" class="sticky-bar-btn">
+      ¡Agregar Ahora! &rarr;
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       PIE DE PÁGINA
+       ========================================================================== -->
+  <footer class="upsell-footer">
+    <div class="container">
+      <p>&copy; 2026 TopperPro VIP &bull; Todos los derechos reservados.</p>
+      <p style="font-size: 0.78rem;">
+        Este sitio no forma parte ni está respaldado por Facebook, Meta, Google o Hotmart. Todas las marcas pertenecen a
+        sus respectivos dueños.
+      </p>
+      <div class="upsell-footer-links">
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Políticas de Privacidad</a>
+        <a href="#">Soporte</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

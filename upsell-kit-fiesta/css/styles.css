@@ -1,0 +1,1246 @@
+/* ==========================================================================
+   UPSELL MEGA PACK KITS DE FIESTA - ULTRA PREMIUM DESIGN
+   Diseño de Alta Conversión (OTO / Upsell Funnel)
+   Integración: Hotmart One-Click Sales Funnel
+   Tipografía: Plus Jakarta Sans
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Vibrant Agency Grade */
+  --bg-primary: #FAFAFD;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F3F4F9;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #FFF5F8;
+  --bg-card-hover: #FFF0F5;
+
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  --border-subtle: #E2E8F0;
+  --border-card: rgba(226, 232, 240, 0.85);
+  --border-focus: #E91E7A;
+
+  /* Brand Accents */
+  --brand-pink: #DA1067;
+  --brand-pink-hover: #C20A59;
+  --brand-pink-glow: rgba(218, 16, 103, 0.3);
+  --brand-pink-light: #FDE8F1;
+
+  --brand-orange: #FA752E;
+  --brand-orange-glow: rgba(250, 117, 46, 0.25);
+
+  --brand-green: #10B981;
+  --brand-green-hover: #059669;
+  --brand-green-glow: rgba(16, 185, 129, 0.35);
+
+  --brand-amber: #F59E0B;
+  --brand-amber-bg: #FEF3C7;
+  --brand-amber-text: #92400E;
+
+  --brand-red: #EF4444;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #DA1067 0%, #FA752E 100%);
+  --gradient-cta: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  --gradient-cta-pink: linear-gradient(135deg, #DA1067 0%, #FA752E 100%);
+  --gradient-card-glass: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+  --gradient-badge: linear-gradient(135deg, rgba(218, 16, 103, 0.12) 0%, rgba(250, 117, 46, 0.12) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.1), 0 10px 15px -5px rgba(15, 23, 42, 0.04);
+  --shadow-glow-pink: 0 12px 35px -5px rgba(218, 16, 103, 0.35);
+  --shadow-glow-green: 0 14px 40px -5px rgba(16, 185, 129, 0.4);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Dark Theme Tokens */
+[data-theme="dark"] {
+  --bg-primary: #0A0D17;
+  --bg-secondary: #121826;
+  --bg-tertiary: #182238;
+  --bg-card: #151D30;
+  --bg-card-subtle: #1E2942;
+  --bg-card-hover: #222F4C;
+
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-light: #64748B;
+  --text-inverse: #0A0D17;
+
+  --border-subtle: #1E293B;
+  --border-card: rgba(255, 255, 255, 0.08);
+  --border-focus: #FF2E93;
+
+  --brand-pink-light: rgba(218, 16, 103, 0.18);
+  --gradient-card-glass: linear-gradient(180deg, rgba(21, 29, 48, 0.95) 0%, rgba(18, 24, 38, 0.9) 100%);
+
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.75);
+  --shadow-glow-pink: 0 12px 40px -5px rgba(218, 16, 103, 0.5);
+  --shadow-glow-green: 0 14px 45px -5px rgba(16, 185, 129, 0.5);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container-narrow {
+  max-width: 760px;
+}
+
+/* ==========================================================================
+   TOPBAR URGENCIA / ADVERTENCIA ROJA & AMBAR
+   ========================================================================== */
+.topbar-warning {
+  background: linear-gradient(90deg, #DC2626 0%, #EA580C 50%, #DC2626 100%);
+  background-size: 200% auto;
+  animation: gradientShift 6s ease infinite;
+  color: #FFFFFF;
+  padding: 10px 16px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.topbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.warning-pulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulseWarning 1.5s infinite;
+}
+
+@keyframes pulseWarning {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.topbar-timer-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  color: #DC2626;
+  font-weight: 900;
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   MINI HEADER & FUNNEL PROGRESS
+   ========================================================================== */
+.funnel-header {
+  padding: 18px 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.funnel-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+}
+
+.brand-badge-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--gradient-hero);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.brand-badge span {
+  color: var(--brand-pink);
+}
+
+.funnel-steps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.step-item.completed {
+  color: var(--brand-green);
+}
+
+.step-item.active {
+  color: var(--brand-pink);
+}
+
+.step-number {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+.step-item.completed .step-number {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--brand-green);
+}
+
+.step-item.active .step-number {
+  background: var(--brand-pink);
+  color: #FFFFFF;
+  box-shadow: 0 0 10px var(--brand-pink-glow);
+}
+
+.step-divider {
+  width: 20px;
+  height: 2px;
+  background: var(--border-subtle);
+}
+
+.theme-toggle-btn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(15deg);
+  background: var(--brand-pink-light);
+}
+
+/* ==========================================================================
+   HERO / OTO HEADLINE SECTION
+   ========================================================================== */
+.hero-section {
+  padding: 44px 0 28px;
+  text-align: center;
+  position: relative;
+}
+
+.oto-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-badge);
+  border: 1px solid rgba(218, 16, 103, 0.25);
+  color: var(--brand-pink);
+  font-weight: 800;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  border-radius: var(--radius-full);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: clamp(1.9rem, 4vw, 2.85rem);
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+  color: var(--text-main);
+}
+
+.hero-title .highlight-gradient {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto 32px;
+}
+
+.hero-subtitle strong {
+  color: var(--text-main);
+}
+
+/* Hero Media Card */
+.hero-media-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-media-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-card);
+  background: var(--bg-card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-media-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow-pink);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-media-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   SECCIÓN 1: LA MAYORÍA DE EMPRENDEDORAS (ORIGINAL ELEVADA)
+   ========================================================================== */
+.section-pain-points {
+  padding: 40px 0 20px;
+}
+
+.pain-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.pain-title {
+  font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.pain-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.pain-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #FFF5F7;
+  border: 1px solid rgba(225, 29, 72, 0.18);
+  padding: 16px 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px -2px rgba(225, 29, 72, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+[data-theme="dark"] .pain-card {
+  background: rgba(225, 29, 72, 0.1);
+  border-color: rgba(225, 29, 72, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.pain-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(225, 29, 72, 0.35);
+  box-shadow: 0 6px 18px -3px rgba(225, 29, 72, 0.12);
+}
+
+.pain-card-icon {
+  color: #E11D48;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(225, 29, 72, 0.1);
+}
+
+.pain-card-text {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.45;
+}
+
+.pain-card-text strong {
+  font-weight: 800;
+  color: #BE123C;
+}
+
+[data-theme="dark"] .pain-card-text strong {
+  color: #FDA4AF;
+}
+
+/* Banner de Oportunidad / Solución */
+.opportunity-banner {
+  margin: 22px auto 0;
+  max-width: 620px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  border-radius: 16px;
+  padding: 16px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.opportunity-banner:hover {
+  transform: translateY(-2px);
+}
+
+.opp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #10B981;
+  color: #FFFFFF;
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.opp-highlight-text {
+  font-size: 0.96rem;
+  color: var(--text-main);
+  line-height: 1.45;
+}
+
+.opp-highlight-text strong {
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   SECCIÓN 2: EL COMPLEMENTO PERFECTO (ORIGINAL ELEVADA)
+   ========================================================================== */
+.section-complement {
+  padding: 36px 0 48px;
+}
+
+.complement-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.complement-tag {
+  color: #0D9488;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .complement-tag {
+  color: #2DD4BF;
+}
+
+.complement-title {
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 900;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.complement-title .highlight-pink {
+  color: #DA1067;
+}
+
+[data-theme="dark"] .complement-title .highlight-pink {
+  color: #FF2E93;
+}
+
+.complement-card {
+  background: var(--bg-card);
+  max-width: 620px;
+  margin: 0 auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 26px 24px;
+  box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.complement-card:hover {
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="dark"] .complement-card {
+  box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.complement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.complement-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 6px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.complement-item:hover {
+  background: var(--bg-tertiary);
+  transform: translateX(4px);
+}
+
+.complement-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(13, 148, 136, 0.12);
+  color: #0D9488;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+[data-theme="dark"] .complement-icon-box {
+  background: rgba(45, 212, 191, 0.15);
+  color: #2DD4BF;
+}
+
+.complement-item:hover .complement-icon-box {
+  background: #0D9488;
+  color: #FFFFFF;
+  transform: scale(1.08) rotate(5deg);
+}
+
+.complement-item-body {
+  flex-grow: 1;
+}
+
+.complement-item-text {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.complement-badge-mini {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.complement-badge-mini.highlight {
+  background: rgba(218, 16, 103, 0.12);
+  color: var(--brand-pink);
+}
+
+@media (max-width: 640px) {
+  .complement-badge-mini {
+    display: none;
+  }
+  .complement-card {
+    padding: 20px 16px;
+  }
+}
+
+/* ==========================================================================
+   MEGA GRID: ENTREGABLES DEL PACK (SOLO LOS NOMBRES)
+   ========================================================================== */
+.section-deliverables {
+  padding: 48px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.section-tag {
+  color: var(--brand-pink);
+  font-weight: 800;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid of Deliverables Cards */
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 14px;
+}
+
+.deliverable-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.deliverable-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gradient-hero);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.deliverable-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand-pink);
+  box-shadow: var(--shadow-md);
+}
+
+.deliverable-card:hover::before {
+  opacity: 1;
+}
+
+.deliverable-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: var(--brand-pink-light);
+  color: var(--brand-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.deliverable-card:hover .deliverable-icon-box {
+  transform: scale(1.08);
+}
+
+.deliverable-number {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--brand-orange);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.deliverable-name {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+}
+
+.deliverable-check {
+  margin-left: auto;
+  color: var(--brand-green);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   HOW IT WORKS (3 PASOS SENCILLOS)
+   ========================================================================== */
+.section-steps {
+  padding: 44px 0;
+  text-align: center;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.step-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+}
+
+.step-pill-tag {
+  display: inline-block;
+  background: var(--brand-pink-light);
+  color: var(--brand-pink);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+
+.step-icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--gradient-hero);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: var(--shadow-glow-pink);
+}
+
+.step-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.step-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   QUOTE / REVELATION CALLOUT
+   ========================================================================== */
+.section-quote {
+  padding: 20px 0 36px;
+}
+
+.quote-box {
+  background: var(--gradient-card-glass);
+  border: 2px dashed rgba(218, 16, 103, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.quote-box p {
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.45;
+  font-style: italic;
+}
+
+.quote-box .quote-accent {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  display: inline;
+}
+
+/* ==========================================================================
+   OFFER / CHECKOUT / PRICING BOX (HOTMART SALES FUNNEL)
+   ========================================================================== */
+.section-offer {
+  padding: 40px 0 60px;
+  position: relative;
+}
+
+.offer-card {
+  background: var(--bg-card);
+  border: 2px solid var(--brand-pink);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  box-shadow: var(--shadow-glow-pink);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-badge-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--gradient-hero);
+  color: #FFFFFF;
+  padding: 8px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.offer-content-inner {
+  margin-top: 14px;
+}
+
+.price-strike-label {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.price-strike {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--brand-red);
+  text-decoration: line-through;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.price-deal-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.price-mega {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.price-currency {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--brand-pink);
+}
+
+.price-amount {
+  font-size: clamp(3.2rem, 7vw, 4.6rem);
+  font-weight: 900;
+  color: var(--brand-pink);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.price-cents {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--brand-pink);
+}
+
+.price-disclaimer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* HOTMART SALES FUNNEL CONTAINER */
+#hotmart-sales-funnel {
+  margin: 18px 0;
+  min-height: 50px;
+}
+
+/* FALLBACK DIRECT CTA BUTTON */
+.btn-cta-upsell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 540px;
+  padding: 18px 24px;
+  background: var(--gradient-cta);
+  color: #FFFFFF;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 900;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glow-green);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  animation: pulseCta 2s infinite;
+}
+
+@keyframes pulseCta {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+  70% { transform: scale(1.02); box-shadow: 0 0 0 16px rgba(16, 185, 129, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.btn-cta-upsell:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.btn-cta-upsell svg {
+  flex-shrink: 0;
+}
+
+/* DECLINE LINK (PSYCHOLOGICAL LOSS AVERSION) */
+.decline-wrapper {
+  margin-top: 20px;
+}
+
+.btn-decline {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: color 0.2s ease;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.btn-decline:hover {
+  color: var(--text-muted);
+}
+
+/* TRUST BADGES ROW */
+.trust-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.trust-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trust-badge-item svg {
+  color: var(--brand-green);
+}
+
+/* ==========================================================================
+   TIMER BOTTOM CALLOUT
+   ========================================================================== */
+.timer-footer-card {
+  margin-top: 28px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+}
+
+.timer-digits-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-top: 8px;
+}
+
+.timer-box {
+  background: var(--text-main);
+  color: var(--text-inverse);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  min-width: 48px;
+  display: inline-block;
+}
+
+.timer-sep {
+  color: var(--brand-pink);
+}
+
+/* ==========================================================================
+   STICKY BOTTOM BAR (ON SCROLL)
+   ========================================================================== */
+.sticky-upsell-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-card);
+  border-top: 2px solid var(--brand-pink);
+  padding: 12px 20px;
+  z-index: 990;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transform: translateY(120%);
+  transition: transform 0.3s ease;
+}
+
+.sticky-upsell-bar.visible {
+  transform: translateY(0);
+}
+
+.sticky-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sticky-bar-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.sticky-bar-price {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--brand-pink);
+}
+
+.sticky-bar-btn {
+  padding: 10px 20px;
+  background: var(--gradient-cta);
+  color: #FFFFFF;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow-green);
+  white-space: nowrap;
+  transition: transform 0.2s ease;
+}
+
+.sticky-bar-btn:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.upsell-footer {
+  padding: 32px 0 60px;
+  background: var(--bg-tertiary);
+  border-top: 1px solid var(--border-subtle);
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+.upsell-footer p {
+  margin-bottom: 8px;
+}
+
+.upsell-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.upsell-footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.upsell-footer-links a:hover {
+  text-decoration: underline;
+  color: var(--brand-pink);
+}
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 640px) {
+  .funnel-steps {
+    display: none;
+  }
+
+  .deliverables-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-card {
+    padding: 30px 16px;
+  }
+
+  .sticky-bar-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
