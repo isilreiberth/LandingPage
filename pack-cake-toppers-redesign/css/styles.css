@@ -339,24 +339,24 @@ button {
   padding: 0.4rem 1.1rem;
   border-radius: var(--radius-full);
   background: var(--brand-pink-light);
-  color: var(--brand-pink);
+  color: #BE0E57;
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
-  border: 1px solid rgba(218, 16, 103, 0.2);
+  border: 1px solid rgba(190, 14, 87, 0.2);
 }
 
 .section-tag.green {
   background: rgba(36, 194, 120, 0.15);
-  color: #10B981;
+  color: #059669;
   border-color: rgba(36, 194, 120, 0.25);
 }
 
 .section-tag.amber {
   background: rgba(245, 158, 11, 0.15);
-  color: #D97706;
+  color: #B45309;
   border-color: rgba(245, 158, 11, 0.25);
 }
 
@@ -1848,7 +1848,7 @@ button {
   max-width: 680px;
   margin: 1.5rem auto 0;
   font-size: 0.775rem;
-  color: #64748B;
+  color: #94A3B8;
   line-height: 1.6;
 }
 

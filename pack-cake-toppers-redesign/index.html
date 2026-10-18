@@ -11,17 +11,22 @@
   <!-- Preconnect para velocidad de carga óptima (<3s) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://i.ibb.co">
   <link rel="preconnect" href="https://fast.wistia.com">
+  <link rel="preconnect" href="https://embed-ssl.wistia.com">
+  <link rel="preconnect" href="https://i.ibb.co">
+  <link rel="preconnect" href="https://i.postimg.cc">
+
+  <!-- Preload LCP Thumbnail de Wistia con prioridad alta -->
+  <link rel="preload" as="image" href="https://embed-ssl.wistia.com/deliveries/c8adb4d48f10bd8b8a35f307b2b99cc5.webp?image_crop_resized=640x1138" fetchpriority="high">
 
   <!-- Wistia VSL Scripts -->
   <script src="https://fast.wistia.com/player.js" async></script>
   <script src="https://fast.wistia.com/embed/8dbtrzkb1h.js" async type="module"></script>
   <style>wistia-player[media-id='8dbtrzkb1h']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/8dbtrzkb1h/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style>
 
-  <!-- Tipografía Google Fonts de Agencia: Plus Jakarta Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <!-- Tipografía Google Fonts no bloqueante con swap -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"></noscript>
 
   <!-- Estilos Principales -->
   <link rel="stylesheet" href="css/styles.css">
@@ -29,17 +34,29 @@
   <!-- Favicon SVG en memoria -->
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel Code Optimizado (Carga diferida para no penalizar TBT ni render inicial) -->
   <script>
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
+      n.queue = [];
+      var pixelLoaded = false;
+      function loadPixel() {
+        if (pixelLoaded) return;
+        pixelLoaded = true;
+        t = b.createElement(e); t.async = !0; t.src = v;
+        s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(function () { setTimeout(loadPixel, 1200); });
+      } else {
+        window.addEventListener('load', function () { setTimeout(loadPixel, 1200); });
+      }
+      ['touchstart', 'scroll', 'click'].forEach(function (ev) {
+        window.addEventListener(ev, loadPixel, { once: true, passive: true });
+      });
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1868903807606248');
@@ -109,6 +126,9 @@
       </div>
     </div>
   </nav>
+
+  <!-- MAIN LANDMARK -->
+  <main id="main-content">
 
   <!-- =========================================================================
        FASE: ATENCIÓN
@@ -285,7 +305,7 @@
 
         <div class="solution-image-container">
           <img src="https://i.ibb.co/hFrL3QyV/Chat-GPT-Image-23-de-mar-de-2025-17-03-59.png"
-            alt="Super Pack Cake Toppers Mockup" class="solution-main-img" loading="lazy">
+            alt="Super Pack Cake Toppers Mockup" class="solution-main-img" width="640" height="640" loading="lazy" decoding="async">
           <div class="solution-floating-badge">
             <div style="background: rgba(36, 194, 120, 0.15); color: #24C278; padding: 0.5rem; border-radius: 10px;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -465,7 +485,7 @@
         <div class="content-item-card reveal-on-scroll">
           <div class="content-img-holder">
             <img src="https://i.ibb.co/hFrL3QyV/Chat-GPT-Image-23-de-mar-de-2025-17-03-59.png" alt="+1.000 Cake Toppers"
-              loading="lazy">
+              width="640" height="640" loading="lazy" decoding="async">
           </div>
           <div class="content-info-holder">
             <span class="content-badge">Pack Principal</span>
@@ -479,7 +499,7 @@
         <div class="content-item-card reveal-on-scroll">
           <div class="content-img-holder">
             <img src="https://i.postimg.cc/y6nV9r5s/imagenes-png-35000.webp" alt="35.000 Imágenes PNG Transparentes"
-              loading="lazy">
+              width="800" height="800" loading="lazy" decoding="async">
           </div>
           <div class="content-info-holder">
             <span class="content-badge">Recursos Gráficos</span>
@@ -493,7 +513,7 @@
         <div class="content-item-card reveal-on-scroll">
           <div class="content-img-holder">
             <img src="https://i.ibb.co/wFgD5RVn/Chat-GPT-Image-23-de-mar-de-2026-17-13-30.png"
-              alt="Tipografías y Capas 3D" loading="lazy">
+              alt="Tipografías y Capas 3D" width="640" height="640" loading="lazy" decoding="async">
           </div>
           <div class="content-info-holder">
             <span class="content-badge">Capas & Shaker</span>
@@ -506,7 +526,7 @@
         <!-- Ítem 4 -->
         <div class="content-item-card reveal-on-scroll">
           <div class="content-img-holder">
-            <img src="assets/svgimagenes.webp" alt="+1800 imagenes SVG Vectorizadas" loading="lazy">
+            <img src="assets/svgimagenes.webp" alt="+1800 imagenes SVG Vectorizadas" width="1254" height="1254" loading="lazy" decoding="async">
           </div>
           <div class="content-info-holder">
             <span class="content-badge">Recursos Gráficos</span>
@@ -635,11 +655,11 @@
           <span class="bonus-badge-top">HOY GRATIS</span>
           <div class="bonus-image-wrapper">
             <img src="https://i.postimg.cc/J44z2WJs/14-000-Cake-Toppers-Digitales.webp"
-              alt="14.000 Cake Toppers Digitales Silhouette Studio" loading="lazy">
+              alt="14.000 Cake Toppers Digitales Silhouette Studio" width="800" height="800" loading="lazy" decoding="async">
           </div>
           <div class="bonus-content-wrapper">
             <div class="bonus-number">Bono #1</div>
-            <h4 class="bonus-title">14.000 Cake Toppers Editables Silhouette</h4>
+            <h3 class="bonus-title">14.000 Cake Toppers Editables Silhouette</h3>
             <p class="bonus-desc">Archivos vectoriales Studio listos para máquinas de corte Silhouette Cameo y Portrait,
               ahorrándote horas de trazo.</p>
             <div class="bonus-value-strip">
@@ -653,11 +673,11 @@
         <div class="bonus-card reveal-on-scroll">
           <span class="bonus-badge-top">HOY GRATIS</span>
           <div class="bonus-image-wrapper">
-            <img src="https://i.ibb.co/tT5ctFb3/bonos3-pack.png" alt="Bono 2 Tipografías y Moldes 3D" loading="lazy">
+            <img src="https://i.ibb.co/tT5ctFb3/bonos3-pack.png" alt="Bono 2 Tipografías y Moldes 3D" width="640" height="640" loading="lazy" decoding="async">
           </div>
           <div class="bonus-content-wrapper">
             <div class="bonus-number">Bono #2</div>
-            <h4 class="bonus-title">Colección de Tipografías 3D Profesional</h4>
+            <h3 class="bonus-title">Colección de Tipografías 3D Profesional</h3>
             <p class="bonus-desc">Más de 1.000 moldes de letras 3D y alfabetos profesionales listos para armar y
               personalizar, ideales para darle volumen, capas y un acabado impactante a tus creaciones.</p>
             <div class="bonus-value-strip">
@@ -672,11 +692,11 @@
           <span class="bonus-badge-top">HOY GRATIS</span>
           <div class="bonus-image-wrapper">
             <img src="https://i.postimg.cc/SRQk3Wn6/Curso-de-Edicion-Creativa-en-tu-Celular.webp"
-              alt="Bono 3 Curso Edición Canva y Silhouette" loading="lazy">
+              alt="Bono 3 Curso Edición Canva y Silhouette" width="800" height="800" loading="lazy" decoding="async">
           </div>
           <div class="bonus-content-wrapper">
             <div class="bonus-number">Bono #3</div>
-            <h4 class="bonus-title">Curso Completo de Edición en Canva y Silhouette</h4>
+            <h3 class="bonus-title">Curso Completo de Edición en Canva y Silhouette</h3>
             <p class="bonus-desc">Clases prácticas en video donde aprenderás a personalizar colores, tipografías y
               preparar archivos para corte e impresión en Silhouette, curso de como Crear y Editar Cake Toppers en canva
               desde la Web y el celular. Tutorial como usar canva Guía Completa, todo para principiantes.</p>
@@ -691,11 +711,11 @@
         <div class="bonus-card reveal-on-scroll">
           <span class="bonus-badge-top">HOY GRATIS</span>
           <div class="bonus-image-wrapper">
-            <img src="https://i.postimg.cc/V6VKPw6W/Bono-Sorpresa-Exclusivo.webp" alt="Bono 4 Vault VIP" loading="lazy">
+            <img src="https://i.postimg.cc/V6VKPw6W/Bono-Sorpresa-Exclusivo.webp" alt="Bono 4 Vault VIP" width="800" height="800" loading="lazy" decoding="async">
           </div>
           <div class="bonus-content-wrapper">
             <div class="bonus-number">Bono #4</div>
-            <h4 class="bonus-title">Vault de Recursos Exclusivos VIP</h4>
+            <h3 class="bonus-title">Vault de Recursos Exclusivos VIP</h3>
             <p class="bonus-desc">Acceso VIP a nuestra bóveda de regalos exclusivos de Papelería Creativa: moldes
               premium, cupcakes, tarjetas de invitación, kits temáticos imprimibles de fiesta, paletas
               cromáticas y recursos sorpresa listos para usar.
@@ -765,7 +785,7 @@
           <!-- Chat 1 -->
           <div class="testimonial-chat-card">
             <img src="https://i.postimg.cc/FHj24Y0f/Testimonio1.webp" alt="Testimonio WhatsApp 1"
-              class="testimonial-chat-img" loading="lazy">
+              class="testimonial-chat-img" width="375" height="800" loading="lazy" decoding="async">
             <div class="testimonial-verified-badge">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#24C278" stroke="#24C278">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -777,7 +797,7 @@
           <!-- Chat 2 -->
           <div class="testimonial-chat-card">
             <img src="https://i.postimg.cc/RV1kr376/Testimonio2.webp" alt="Testimonio WhatsApp 2"
-              class="testimonial-chat-img" loading="lazy">
+              class="testimonial-chat-img" width="374" height="800" loading="lazy" decoding="async">
             <div class="testimonial-verified-badge">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#24C278" stroke="#24C278">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -789,7 +809,7 @@
           <!-- Chat 3 -->
           <div class="testimonial-chat-card">
             <img src="https://i.postimg.cc/W3Jy5tpJ/Testimonio3.webp" alt="Testimonio WhatsApp 3"
-              class="testimonial-chat-img" loading="lazy">
+              class="testimonial-chat-img" width="360" height="800" loading="lazy" decoding="async">
             <div class="testimonial-verified-badge">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#24C278" stroke="#24C278">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -801,7 +821,7 @@
           <!-- Chat 4 -->
           <div class="testimonial-chat-card">
             <img src="https://i.postimg.cc/tJ3MHfxJ/Testimonio4.webp" alt="Testimonio WhatsApp 4"
-              class="testimonial-chat-img" loading="lazy">
+              class="testimonial-chat-img" width="375" height="800" loading="lazy" decoding="async">
             <div class="testimonial-verified-badge">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#24C278" stroke="#24C278">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -813,7 +833,7 @@
           <!-- Chat 5 -->
           <div class="testimonial-chat-card">
             <img src="https://i.postimg.cc/cC0cfJvW/Testimonio5.webp" alt="Testimonio WhatsApp 5"
-              class="testimonial-chat-img" loading="lazy">
+              class="testimonial-chat-img" width="374" height="800" loading="lazy" decoding="async">
             <div class="testimonial-verified-badge">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#24C278" stroke="#24C278">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -854,52 +874,52 @@
         <!-- Pestaña: Todas las Categorías -->
         <div class="demo-gallery-item" data-category="todas">
           <img src="https://i.postimg.cc/x12bCZN7/Todas-las-categorias1.webp"
-            alt="Todas las Categorías - Explorador de Carpetas" loading="lazy">
+            alt="Todas las Categorías - Explorador de Carpetas" width="1280" height="451" loading="lazy" decoding="async">
         </div>
         <div class="demo-gallery-item" data-category="todas">
           <img src="https://i.postimg.cc/jScCjSbL/Todas-las-categorias2.webp"
-            alt="Todas las Categorías - Catálogo en Canva" loading="lazy">
+            alt="Todas las Categorías - Catálogo en Canva" width="1280" height="458" loading="lazy" decoding="async">
         </div>
 
         <!-- Pestaña: Infantiles & SuperHeroes -->
         <div class="demo-gallery-item" data-category="infantiles" style="display: none; opacity: 0;">
-          <img src="https://i.postimg.cc/vmSBW2Dm/Infantiles.webp" alt="Diseños Infantiles Editables" loading="lazy">
+          <img src="https://i.postimg.cc/vmSBW2Dm/Infantiles.webp" alt="Diseños Infantiles Editables" width="1280" height="458" loading="lazy" decoding="async">
         </div>
         <div class="demo-gallery-item" data-category="infantiles" style="display: none; opacity: 0;">
           <img src="https://i.postimg.cc/FsZhyCnn/super-heroes.webp" alt="Superhéroes - Batman y Diseños de Acción"
-            loading="lazy">
+            width="1279" height="504" loading="lazy" decoding="async">
         </div>
         <div class="demo-gallery-item" data-category="infantiles" style="display: none; opacity: 0;">
           <img src="https://i.postimg.cc/QdYsP9DH/super-heroes2.webp" alt="Superhéroes - Spiderman y Elementos"
-            loading="lazy">
+            width="1280" height="447" loading="lazy" decoding="async">
         </div>
 
         <!-- Pestaña: Cumpleaños & Bodas -->
         <div class="demo-gallery-item" data-category="cumpleanos" style="display: none; opacity: 0;">
           <img src="https://i.postimg.cc/tg1yHqRf/cumpleanos.webp" alt="Colección de Cumpleaños y Números"
-            loading="lazy">
+            width="1280" height="453" loading="lazy" decoding="async">
         </div>
         <div class="demo-gallery-item" data-category="cumpleanos" style="display: none; opacity: 0;">
           <img src="https://i.postimg.cc/brpKdp8Y/Felicidades.webp" alt="Cake Toppers Felicidades con Capas"
-            loading="lazy">
+            width="1280" height="482" loading="lazy" decoding="async">
         </div>
 
         <!-- Pestaña: Tendencias & Memes -->
         <div class="demo-gallery-item" data-category="tendencias" style="display: none; opacity: 0;">
           <img src="https://i.postimg.cc/T2JzFLqL/tendencias.webp" alt="Tendencias Actuales y Diseños Populares"
-            loading="lazy">
+            width="1279" height="491" loading="lazy" decoding="async">
         </div>
         <div class="demo-gallery-item" data-category="tendencias" style="display: none; opacity: 0;">
-          <img src="https://i.postimg.cc/YCZZY1MC/meme.webp" alt="Memes, Redes Sociales y Emojis" loading="lazy">
+          <img src="https://i.postimg.cc/YCZZY1MC/meme.webp" alt="Memes, Redes Sociales y Emojis" width="1279" height="490" loading="lazy" decoding="async">
         </div>
 
         <!-- Pestaña: Halloween & Navidad -->
         <div class="demo-gallery-item" data-category="halloween-navidad" style="display: none; opacity: 0;">
-          <img src="https://i.postimg.cc/zBjxtWZJ/Hallowen.webp" alt="Colección Especial Halloween" loading="lazy">
+          <img src="https://i.postimg.cc/zBjxtWZJ/Hallowen.webp" alt="Colección Especial Halloween" width="1280" height="508" loading="lazy" decoding="async">
         </div>
         <div class="demo-gallery-item" data-category="halloween-navidad" style="display: none; opacity: 0;">
           <img src="https://i.postimg.cc/nrh06zpk/Navidad.webp" alt="Colección Especial Navidad y Fiestas"
-            loading="lazy">
+            width="1280" height="453" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -1059,7 +1079,7 @@
     <div class="container">
       <div class="guarantee-container reveal-on-scroll">
         <img src="https://i.postimg.cc/SsSKb059/guarantee-badge.webp" alt="Sello Garantía 30 Días"
-          class="guarantee-badge-img" loading="lazy">
+          class="guarantee-badge-img" width="800" height="800" loading="lazy" decoding="async">
         <h2 class="guarantee-title">✅ GARANTÍA TOTAL: Riesgo Cero por 30 Días</h2>
         <p class="guarantee-desc">
           Si en los primeros 30 días sientes que este contenido no superó tus expectativas o simplemente decides que no
@@ -1231,6 +1251,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer class="footer-main">
     <div class="container">
@@ -1282,13 +1304,13 @@
     <div class="lightbox-overlay"></div>
     <div class="lightbox-content">
       <button class="lightbox-close" aria-label="Cerrar vista previa">&times;</button>
-      <img id="lightbox-img" src="" alt="Vista previa ampliada">
+      <img id="lightbox-img" src="" alt="Vista previa ampliada" width="1200" height="800">
       <p id="lightbox-caption" class="lightbox-caption"></p>
     </div>
   </div>
 
   <!-- Scripts -->
-  <script src="js/app.js"></script>
+  <script src="js/app.js" defer></script>
 </body>
 
 </html>
