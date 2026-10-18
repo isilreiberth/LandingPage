@@ -8,32 +8,53 @@
   <meta name="description"
     content="Super Pack con +1.000 Cake Toppers Digitales editables en Canva. Listos para imprimir, personalizar y vender. Acceso inmediato y de por vida con garantía total de 30 días.">
 
-  <!-- Preconnect para velocidad de carga óptima (<3s) -->
+  <!-- Preconnect para velocidad de carga óptima (solo orígenes críticos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fast.wistia.com">
-  <link rel="preconnect" href="https://embed-ssl.wistia.com">
-  <link rel="preconnect" href="https://i.ibb.co">
-  <link rel="preconnect" href="https://i.postimg.cc">
-
-  <!-- Preload LCP Thumbnail de Wistia con prioridad alta -->
-  <link rel="preload" as="image" href="https://embed-ssl.wistia.com/deliveries/c8adb4d48f10bd8b8a35f307b2b99cc5.webp?image_crop_resized=640x1138" fetchpriority="high">
-
-  <!-- Wistia VSL Scripts -->
-  <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/8dbtrzkb1h.js" async type="module"></script>
-  <style>wistia-player[media-id='8dbtrzkb1h']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/8dbtrzkb1h/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style>
-
-  <!-- Tipografía Google Fonts no bloqueante con swap -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"></noscript>
 
   <!-- Estilos Principales -->
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- Tipografía Google Fonts (con swap para render inmediato sin bloqueo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilo del placeholder de Wistia VSL sin layout shift -->
+  <style>wistia-player[media-id='8dbtrzkb1h']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/8dbtrzkb1h/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style>
+
   <!-- Favicon SVG en memoria -->
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
+
+  <!-- Wistia VSL Scripts (Carga diferida inteligente para evitar descarga anticipada de video de 9.2MB) -->
+  <script>
+    (function () {
+      var wistiaLoaded = false;
+      function loadWistia() {
+        if (wistiaLoaded) return;
+        wistiaLoaded = true;
+        var s1 = document.createElement('script');
+        s1.src = 'https://fast.wistia.com/player.js';
+        s1.async = true;
+        document.head.appendChild(s1);
+
+        var s2 = document.createElement('script');
+        s2.src = 'https://fast.wistia.com/embed/8dbtrzkb1h.js';
+        s2.async = true;
+        s2.type = 'module';
+        document.head.appendChild(s2);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(function () { setTimeout(loadWistia, 1500); });
+      } else {
+        window.addEventListener('load', function () { setTimeout(loadWistia, 1500); });
+      }
+      ['touchstart', 'scroll', 'click'].forEach(function (ev) {
+        window.addEventListener(ev, loadWistia, { once: true, passive: true });
+      });
+    })();
+  </script>
+
   <!-- Meta Pixel Code Optimizado (Carga diferida para no penalizar TBT ni render inicial) -->
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -50,9 +71,9 @@
         s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
       }
       if ('requestIdleCallback' in window) {
-        requestIdleCallback(function () { setTimeout(loadPixel, 1200); });
+        requestIdleCallback(function () { setTimeout(loadPixel, 2000); });
       } else {
-        window.addEventListener('load', function () { setTimeout(loadPixel, 1200); });
+        window.addEventListener('load', function () { setTimeout(loadPixel, 2000); });
       }
       ['touchstart', 'scroll', 'click'].forEach(function (ev) {
         window.addEventListener(ev, loadPixel, { once: true, passive: true });
@@ -158,7 +179,7 @@
       <div class="vsl-wrapper reveal-on-scroll">
         <div class="vsl-inner">
           <div id="vsl-player-container" class="vsl-smartplayer-box">
-            <wistia-player media-id="8dbtrzkb1h" aspect="0.5625"></wistia-player>
+            <wistia-player media-id="8dbtrzkb1h" aspect="0.5625" preload="none"></wistia-player>
           </div>
         </div>
       </div>
@@ -304,7 +325,7 @@
         </div>
 
         <div class="solution-image-container">
-          <img src="https://i.ibb.co/hFrL3QyV/Chat-GPT-Image-23-de-mar-de-2025-17-03-59.png"
+          <img src="assets/solution-mockup.jpg"
             alt="Super Pack Cake Toppers Mockup" class="solution-main-img" width="640" height="640" loading="lazy" decoding="async">
           <div class="solution-floating-badge">
             <div style="background: rgba(36, 194, 120, 0.15); color: #24C278; padding: 0.5rem; border-radius: 10px;">
@@ -484,7 +505,7 @@
         <!-- Ítem 1 -->
         <div class="content-item-card reveal-on-scroll">
           <div class="content-img-holder">
-            <img src="https://i.ibb.co/hFrL3QyV/Chat-GPT-Image-23-de-mar-de-2025-17-03-59.png" alt="+1.000 Cake Toppers"
+            <img src="assets/solution-mockup.jpg" alt="+1.000 Cake Toppers"
               width="640" height="640" loading="lazy" decoding="async">
           </div>
           <div class="content-info-holder">
